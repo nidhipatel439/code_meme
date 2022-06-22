@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.container {
+  width: 1000px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+/* header section */
+#header {
+  background: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+.header-inr {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.header-logo {
+  flex: 1.7 0 0;
+  padding-top: 6px;
+}
+.search {
+  flex: 2 0 0;
+}
+.header-logo a {
+  background-image: url(../images/instagram.png);
+  background-position: 0 -324px;
+  width: 103px;
+  height: 29px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.search input[type="text"] {
+  font-size: 16px;
+  border: none;
+  background: rgb(239, 239, 239);
+  width: 268px;
+  height: 36px;
+  border-radius: 0 8px 8px 0;
+}
+input:focus-visible {
+  outline: none;
+}
+
+.search button {
+  float: left;
+  margin-top: 0;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  height: 36px;
+  border-radius: 8px 0 0 8px;
+}
+
+#menu ul li {
+  display: inline-block;
+  padding: 0 11px;
+}
+#menu ul li:last-child {
+  padding-right: 0;
+}
+#menu ul li:first-child {
+  padding-left: 0;
+}
+#menu ul li.menu-profile img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+}
+
+/* profile section */
+#profile {
+  display: flex;
+  padding: 30px 0;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+.profile-icon {
+  flex: 0.5 0 0;
+}
+.profile-icon img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.profile-detail {
+  flex: 1 0 0;
+}
+.profile-header h1 {
+  font-weight: 300;
+  color: #262626;
+  font-size: 28px;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+.profile-header a {
+  border: 1px solid rgb(219, 219, 219);
+  color: #262626;
+  font-size: 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 5px 9px;
+  margin-left: 20px;
+}
+.profile-header button {
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  padding: 0;
+  margin-left: 13px;
+  cursor: pointer;
+}
+.profile-information {
+  margin: 20px 0;
+}
+.profile-information ul {
+  padding: 0;
+}
+.profile-information ul li {
+  display: inline-block;
+  font-size: 16px;
+  color: #262626;
+  margin: 0 20px;
+}
+.profile-information ul li:first-child {
+  margin-left: 0;
+}
+.profile-information ul li span {
+  font-weight: bold;
+}
+.profile-name h2 {
+  font-size: 16px;
+  color: #262626;
+}
+/* post section */
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.col-3 {
+  width: 281px;
+  height: 281px;
+  position: relative;
+}
+.col-3 img {
+  width: 100%;
+  height: 100%;
+}
+.post-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+.post-overlay ul {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+.post-overlay ul li {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 23px;
+  font-size: 19px;
+  position: relative;
+}
+.post-overlay ul li.post-like::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 4px;
+  background: url(../images/like.png);
+  width: 16px;
+  height: 16px;
+}
+.post-overlay ul li.post-comment::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/comment.png);
+}
+.col-3:hover .post-overlay {
+  display: block;
+}
+
+.post-link ul li a {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #8e8e8e;
+  position: relative;
+}
+.post-link ul {
+  width: 311px;
+  margin: 0 auto;
+  padding: 0;
+}
+.post-link ul li {
+  display: inline-block;
+  padding: 14px 13px;
+  margin: 0 17px;
+}
+.post-link ul li.active a {
+  color: #000000;
+}
+.post-link ul li.active {
+  border-top: 1px solid #000000;
+}
+.post-link ul li.link1 a::before {
+  content: "";
+  position: absolute;
+  left: -17px;
+  top: 0px;
+  width: 12px;
+  height: 12px;
+  background: url(../images/post.png);
+  background-size: 100%;
+}
+.post-link ul li.link2 a::before {
+  content: "";
+  position: absolute;
+  left: -17px;
+  top: -2px;
+  width: 12px;
+  height: 16px;
+  background: url(../images/saved.png);
+  background-size: 100%;
+}
+.post-link ul li.link3 a::before {
+  content: "";
+  position: absolute;
+  left: -21px;
+  top: -3px;
+  width: 16px;
+  height: 17px;
+  background: url(../images/tagged.png);
+  background-size: 100%;
+}
+
+/* footer section */
+#footer {
+  text-align: center;
+  padding: 50px 0px 0;
+}
+#footer p {
+  color: #8e8e8e;
+}
