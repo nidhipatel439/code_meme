@@ -12,12 +12,7 @@
 
 <body>
     <?php
-    $connect = mysqli_connect(
-        "sql203.epizy.com",
-        "epiz_31641832",
-        "H7cqtgynMmPWXiA",
-        "epiz_31641832_instagram"
-    );
+
     $query = 'SELECT id, image, comment, likes, posted_at FROM instagram_posts ORDER BY posted_at';
     $result = mysqli_query($connect, $query);
     ?>
